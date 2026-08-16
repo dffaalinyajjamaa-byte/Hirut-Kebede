@@ -10,8 +10,8 @@ export const StorageSeatCalculator: React.FC<StorageSeatCalculatorProps> = ({ on
   const totalStorageTB = 5;
   const totalStorageGB = 5000;
   const storagePerSeatGB = Math.floor(totalStorageGB / seats);
-  const pricePerSeatETB = (399 / seats).toFixed(1);
-  const pricePerSeatPerMonthETB = (399 / seats / 18).toFixed(1);
+  const pricePerSeatETB = (649 / seats).toFixed(1);
+  const pricePerSeatPerMonthETB = (649 / seats / 18).toFixed(1);
 
   return (
     <section id="storage" className="py-12 px-4 max-w-7xl mx-auto w-full scroll-mt-24">
@@ -154,9 +154,9 @@ export const StorageSeatCalculator: React.FC<StorageSeatCalculatorProps> = ({ on
 
               <button
                 onClick={onOpenCheckout}
-                className="clay-button w-full py-3 font-bold text-xs text-[#111827] cursor-pointer mt-2"
+                className="clay-button min-h-[48px] w-full py-3.5 font-bold text-xs text-[#111827] cursor-pointer mt-2 select-none active:scale-95 flex items-center justify-center gap-2"
               >
-                <span>Deploy 5 TB Plan for 399 ETB</span>
+                <span>Deploy 5 TB Plan for 649 ETB</span>
               </button>
             </div>
           </div>

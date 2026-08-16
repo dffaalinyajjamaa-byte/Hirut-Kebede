@@ -31,10 +31,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, onOpen
       <div className="glass-panel rounded-[40px] p-6 sm:p-10 md:p-14 relative overflow-hidden">
         {/* Holographic Top Banner Pill */}
         <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/10 border border-amber-500/30 rounded-full shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            <span className="text-[11px] font-bold tracking-wide text-amber-900">
-              ⚡ Limited Allocation: Price increasing to 649 ETB soon! Lock in 399 ETB today
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            <span className="text-[11px] font-bold tracking-wide text-blue-900">
+              ⚡ Google AI Pro (Gemini Advanced) Master Subscription • 649 ETB
             </span>
           </div>
 
@@ -84,18 +84,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, onOpen
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <button
                 onClick={onOpenCheckout}
-                className="clay-button px-8 py-4 text-slate-900 font-bold text-base flex items-center justify-center gap-3 cursor-pointer group"
+                className="clay-button min-h-[52px] px-8 py-4 text-slate-900 font-bold text-base flex items-center justify-center gap-3 cursor-pointer select-none active:scale-95 group"
               >
                 <span>Subscribe Now</span>
                 <span className="gemini-gradient-bg text-white px-3 py-1 rounded-full text-xs font-black tracking-wide shadow-sm">
-                  399 ETB
+                  649 ETB
                 </span>
                 <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <button
                 onClick={onOpenChat}
-                className="p-4 bg-white/50 border border-white/80 hover:bg-white/80 rounded-full text-[#111827] font-semibold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer backdrop-blur-md shadow-xs"
+                className="min-h-[52px] p-4 bg-white/50 border border-white/80 hover:bg-white/80 rounded-full text-[#111827] font-semibold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer backdrop-blur-md shadow-xs select-none active:scale-95"
               >
                 <Sparkles className="w-4 h-4 text-indigo-500" />
                 <span>Ask AI Specialist</span>
@@ -122,12 +122,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, onOpen
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <div className="flex items-baseline gap-2">
-                    <h3 className="text-3xl font-bold text-[#111827]">399 ETB</h3>
+                    <h3 className="text-3xl font-bold text-[#111827]">649 ETB</h3>
                     <span className="text-xs text-[#9CA3AF] line-through font-medium">~36,000 ETB</span>
                   </div>
                   <p className="text-xs text-[#6B7280] mt-0.5">All-inclusive fixed rate (18 Months)</p>
-                  <div className="mt-1.5 inline-block px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200/80 text-[10px] font-bold text-amber-800">
-                    Next Batch: 649 ETB (Save 250 ETB)
+                  <div className="mt-1.5 inline-block px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-[10px] font-bold text-emerald-800">
+                    Save ~35,350 ETB vs standard monthly billing
                   </div>
                 </div>
                 <div className="px-3.5 py-1.5 bg-gradient-to-r from-[#3B82F6]/10 to-[#8B5CF6]/10 border border-[#3B82F6]/20 rounded-full">
@@ -194,9 +194,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, onOpen
 
               <button
                 onClick={onOpenCheckout}
-                className="clay-button w-full py-4 font-bold text-base text-[#111827] cursor-pointer"
+                className="clay-button min-h-[50px] w-full py-4 font-bold text-base text-[#111827] cursor-pointer select-none active:scale-95"
               >
-                Proceed to Order (399 ETB)
+                Proceed to Order (649 ETB)
               </button>
             </div>
           </div>

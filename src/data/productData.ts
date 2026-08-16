@@ -6,9 +6,9 @@ export const GOOGLE_AI_PRO_TIER: ProductTier = {
   subTitle: '18-Month Master License • 5 TB Cloud Ecosystem • 5 Multi-Seats',
   durationMonths: 18,
   durationLabel: '18-Month Continuous Access',
-  priceETB: 399,
+  priceETB: 649,
   upcomingPriceETB: 649,
-  priceIncreaseNotice: '⚡ Price Increase Alert: Pricing increases to 649 ETB next batch! Lock in 399 ETB today and save 250 ETB.',
+  priceIncreaseNotice: '⚡ Verified Pricing: 649 ETB for full 18-month access (Save 98% vs $360 standard billing).',
   originalPriceUSD: 360, // $19.99/mo * 18 = ~$360
   savingsPercentage: 98,
   storageTB: 5,
@@ -29,7 +29,7 @@ export const GOOGLE_AI_PRO_TIER: ProductTier = {
     'Support SLA: Any connection or activation queries must be reported within 24 hours for review.',
     'Commercial Basis: Non-warranty basis after successful 24-hour delivery & authorization.',
     'Privacy Guarantee: Your data remains private on your personal Google Account.',
-    'Price Increase Notice: Next tier allocation increases to 649 ETB after current batch expires.'
+    'Official Price: 649 ETB one-time payment for 18-month duration with 5TB & 5 seats.'
   ]
 };
 
@@ -41,7 +41,7 @@ export const PAYMENT_METHODS: PaymentAccountDetails[] = [
     accountNumber: '0911223344',
     accountName: 'Amir Plus Digital Services',
     badge: 'Instant Automated Receipt',
-    instructions: 'Open your TeleBirr App -> Send Money -> Enter 0911223344 -> Amount: 399 ETB -> Copy transaction reference or screenshot.',
+    instructions: 'Open your TeleBirr App -> Send Money -> Enter 0911223344 -> Amount: 649 ETB -> Copy transaction reference or screenshot.',
     icon: 'Smartphone',
     accentColor: '#0EA5E9'
   },
@@ -52,7 +52,7 @@ export const PAYMENT_METHODS: PaymentAccountDetails[] = [
     accountNumber: '1000492837192',
     accountName: 'Amir Plus Solutions',
     badge: 'Official Commercial Account',
-    instructions: 'Use CBE Mobile App or CBE Birr -> Transfer to Account: 1000492837192 -> Amount: 399 ETB -> Enter your target Gmail as reference remarks.',
+    instructions: 'Use CBE Mobile App or CBE Birr -> Transfer to Account: 1000492837192 -> Amount: 649 ETB -> Enter your target Gmail as reference remarks.',
     icon: 'Building2',
     accentColor: '#8B5CF6'
   },
@@ -63,7 +63,7 @@ export const PAYMENT_METHODS: PaymentAccountDetails[] = [
     accountNumber: '849201948',
     accountName: 'Amir Plus Global',
     badge: 'Direct Bank Settlement',
-    instructions: 'Transfer via BoA Mobile Banking or BOApay -> Account: 849201948 -> Amount: 399 ETB -> Submit the reference number upon transfer.',
+    instructions: 'Transfer via BoA Mobile Banking or BOApay -> Account: 849201948 -> Amount: 649 ETB -> Submit the reference number upon transfer.',
     icon: 'Landmark',
     accentColor: '#F59E0B'
   }
@@ -111,13 +111,13 @@ export const MOCKUP_PRESETS: MockupPreset[] = [
 export const COMPARISON_DATA = [
   {
     feature: 'Monthly Cost (ETB Equiv.)',
-    amirPlus: '399 ETB (Lock in now! Increases to 649 ETB next batch)',
+    amirPlus: '649 ETB (~36 ETB/month for 18 Months!)',
     standardGoogle: '~$20/mo (~2,400+ ETB/month)',
     chatGptPlus: '~$20/mo (~2,400+ ETB/month)'
   },
   {
     feature: 'Total 18-Month Cost',
-    amirPlus: '399 ETB (Save 250 ETB vs 649 ETB upcoming rate)',
+    amirPlus: '649 ETB (One-time payment for 18 Months)',
     standardGoogle: '~43,200 ETB ($360 total)',
     chatGptPlus: '~43,200 ETB ($360 total)'
   },

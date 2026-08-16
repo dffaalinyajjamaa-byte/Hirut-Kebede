@@ -37,8 +37,7 @@ Your mission:
 
 PRODUCT CATALOG SPECIFICATIONS:
 - Product Title: Google AI Pro (Gemini Advanced / 18-Month License)
-- Retail Price: 399 ETB (Limited-time early bird pricing! Price increases to 649 ETB next batch)
-- Upcoming Price Increase: 649 ETB (Urge users to lock in 399 ETB now to save 250 ETB)
+- Retail Price: 649 ETB (Unbeatable Ethiopian local rate)
 - Duration: 18 Months continuous full access
 - Storage: 5 TB (5,000 GB) unified Cloud Storage (Google Drive, Google Photos, Gmail)
 - Multi-Seat Sharing: Add up to 5 family or team members with individual private allocations
@@ -61,8 +60,7 @@ LOCAL PAYMENT OPTIONS:
 COMMUNICATION STYLE:
 - Tone: Executive, warm, Apple-grade sophistication, transparent, and direct.
 - Formatting: Use clean markdown bullet points, bold key terms, and short scannable sections. Avoid cluttered text walls.
-- Remind users that pricing is increasing from 399 ETB to 649 ETB very soon, creating urgency to reserve their 5TB multi-seat license now.
-- When the user asks how to buy or order, provide clear 3-step checkout guidance: 1) Enter target Gmail, 2) Select payment method (TeleBirr/CBE/BoA) and transfer 399 ETB, 3) Submit reference to receive the automated receipt & 24h dispatch link.
+- When the user asks how to buy or order, provide clear 3-step checkout guidance: 1) Enter target Gmail, 2) Select payment method (TeleBirr/CBE/BoA) and transfer 649 ETB, 3) Submit reference to receive the automated receipt & 24h dispatch link.
 `;
 
 // Health check endpoint
@@ -88,12 +86,12 @@ app.post('/api/chat', async (req, res) => {
     if (!apiKey) {
       // Fallback luxury response if key is pending in preview
       return res.json({
-        reply: `Greetings! I am Amir Plus, your Google AI Pro product specialist.\n\nOur flagship **Google AI Pro (Gemini Advanced 18-Month License)** is currently available for just **399 ETB**.\n\n✨ **Core Highlights:**\n• **18 Months Continuous Access** (Full duration)\n• **5 TB Cloud Ecosystem** across Drive, Photos, & Gmail\n• **Multi-Seat Access:** Add up to 5 family/team members\n• **100% Private Instance:** Activated directly on your personal Gmail\n• **Zero Foreign Card Needed:** Paid conveniently via TeleBirr, CBE, or Bank of Abyssinia.\n\nWould you like me to guide you through instant activation or calculate your team storage breakdown?`,
+        reply: `Greetings! I am Amir Plus, your Google AI Pro product specialist.\n\nOur flagship **Google AI Pro (Gemini Advanced 18-Month License)** is available for **649 ETB**.\n\n✨ **Core Highlights:**\n• **18 Months Continuous Access** (Full duration)\n• **5 TB Cloud Ecosystem** across Drive, Photos, & Gmail\n• **Multi-Seat Access:** Add up to 5 family/team members\n• **100% Private Instance:** Activated directly on your personal Gmail\n• **Zero Foreign Card Needed:** Paid conveniently via TeleBirr, CBE, or Bank of Abyssinia.\n\nWould you like me to guide you through instant activation or calculate your team storage breakdown?`,
         suggestions: [
           'How does the 18-Month license work?',
           'What are the payment options?',
           'How do 5 team members share 5 TB?',
-          'Start 399 ETB Checkout'
+          'Start 649 ETB Checkout'
         ]
       });
     }
@@ -120,7 +118,7 @@ app.post('/api/chat', async (req, res) => {
       'Show 5 TB storage distribution',
       'Explain 24-hour fulfillment SLA',
       'Payment details for TeleBirr & CBE',
-      'Proceed to 399 ETB Checkout'
+      'Proceed to 649 ETB Checkout'
     ];
 
     if (lastMessage.toLowerCase().includes('telebirr') || lastMessage.toLowerCase().includes('pay')) {
@@ -137,7 +135,7 @@ app.post('/api/chat', async (req, res) => {
     console.error('Gemini Chat API Error:', error);
     res.status(500).json({
       error: 'Failed to process AI consultation',
-      fallback: 'Amir Plus is ready to assist you. You can purchase the 18-Month Google AI Pro license for 399 ETB with 5TB storage and 5 multi-seats directly in the checkout section below.'
+      fallback: 'Amir Plus is ready to assist you. You can purchase the 18-Month Google AI Pro license for 649 ETB with 5TB storage and 5 multi-seats directly in the checkout section below.'
     });
   }
 });
@@ -202,7 +200,7 @@ app.post('/api/send-order-receipt', async (req, res) => {
       targetGmail,
       userEmail,
       productTitle = 'Google AI Pro (18-Month Master License)',
-      priceETB = 399,
+      priceETB = 649,
       paymentMethod = 'telebirr',
       paymentReference = 'N/A',
       storageTB = 5,
@@ -263,7 +261,7 @@ app.post('/api/send-order-receipt', async (req, res) => {
         <tr><td class="lbl">Target Activation Gmail</td><td class="val">${targetGmail}</td></tr>
         <tr><td class="lbl">Cloud Ecosystem Storage</td><td class="val">${storageTB} TB (5,000 GB) Unified</td></tr>
         <tr><td class="lbl">Multi-Seat Allocation</td><td class="val">${seats} Individual Members</td></tr>
-        <tr><td class="lbl">Amount Paid</td><td class="val" style="color: #2563EB;">${priceETB} ETB <span style="font-size: 10px; color: #10B981;">(Saved 250 ETB vs upcoming 649 ETB price)</span></td></tr>
+        <tr><td class="lbl">Amount Paid</td><td class="val" style="color: #2563EB;">${priceETB} ETB <span style="font-size: 10px; color: #10B981;">(Save ~98% vs international billing)</span></td></tr>
         <tr><td class="lbl">Payment Channel</td><td class="val" style="text-transform: uppercase;">${paymentMethod}</td></tr>
         <tr><td class="lbl">Transaction Reference</td><td class="val" style="font-family: monospace;">${paymentReference}</td></tr>
         <tr><td class="lbl">Issued Date</td><td class="val" style="font-size: 11px;">${formattedDate}</td></tr>
@@ -292,8 +290,7 @@ app.post('/api/send-order-receipt', async (req, res) => {
         sentAt: timestamp,
         slaDeadline: deadline,
         receiptHtml: htmlContent,
-        priceLockedInETB: priceETB,
-        upcomingPriceETB: 649
+        priceLockedInETB: priceETB
       }
     });
   } catch (error) {

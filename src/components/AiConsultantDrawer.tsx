@@ -89,7 +89,7 @@ export const AiConsultantDrawer: React.FC<AiConsultantDrawerProps> = ({
         sender: 'amir',
         text: data.reply || data.fallback || 'I am ready to assist you with Google AI Pro.',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        suggestions: data.suggestions || ['Start 399 ETB Checkout', 'Ask another question']
+        suggestions: data.suggestions || ['Start 649 ETB Checkout', 'Ask another question']
       };
 
       setMessages((prev) => [...prev, amirMsg]);
@@ -98,9 +98,9 @@ export const AiConsultantDrawer: React.FC<AiConsultantDrawerProps> = ({
       const fallbackMsg: ChatMessage = {
         id: `amir-err-${Date.now()}`,
         sender: 'amir',
-        text: 'The 18-Month Google AI Pro license is available for 399 ETB with 5 TB Cloud Storage and 5 Multi-Seats. Click "Get AI Pro" below to secure your license.',
+        text: 'The 18-Month Google AI Pro license is available for 649 ETB with 5 TB Cloud Storage and 5 Multi-Seats. Click "Get AI Pro" below to secure your license.',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        suggestions: ['Start 399 ETB Checkout']
+        suggestions: ['Start 649 ETB Checkout']
       };
       setMessages((prev) => [...prev, fallbackMsg]);
     } finally {
@@ -131,13 +131,13 @@ export const AiConsultantDrawer: React.FC<AiConsultantDrawerProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={onOpenCheckout}
-              className="clay-button px-3.5 py-1.5 font-bold text-xs text-[#111827] cursor-pointer"
+              className="clay-button min-h-[38px] px-3.5 py-1.5 font-bold text-xs text-[#111827] cursor-pointer select-none active:scale-95 flex items-center justify-center"
             >
-              Order (399 ETB)
+              Order (649 ETB)
             </button>
             <button
               onClick={onClose}
-              className="p-2 rounded-full hover:bg-white/60 text-[#6B7280] hover:text-[#111827] transition-colors cursor-pointer"
+              className="p-2.5 rounded-full hover:bg-white/60 text-[#6B7280] hover:text-[#111827] transition-colors cursor-pointer select-none active:scale-90 min-w-[36px] min-h-[36px] flex items-center justify-center"
             >
               <X className="w-4 h-4" />
             </button>

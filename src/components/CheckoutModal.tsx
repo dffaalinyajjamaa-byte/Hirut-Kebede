@@ -249,7 +249,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               </div>
               <div className="flex justify-between pb-1 border-b border-white/60">
                 <span className="text-[#9CA3AF] font-medium">Amount Paid:</span>
-                <span className="font-bold text-blue-600">399 ETB <span className="text-[10px] text-emerald-600 font-normal">(Saved 250 ETB vs 649 ETB rate)</span></span>
+                <span className="font-bold text-blue-600">649 ETB <span className="text-[10px] text-emerald-600 font-normal">(Save ~98% vs $360 standard billing)</span></span>
               </div>
               <div className="flex justify-between pb-1 border-b border-white/60">
                 <span className="text-[#9CA3AF] font-medium">Payment Channel:</span>
@@ -263,7 +263,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
             <button
               onClick={onClose}
-              className="clay-button w-full py-3.5 font-bold text-sm text-[#111827] cursor-pointer"
+              className="clay-button min-h-[48px] w-full py-3.5 font-bold text-sm text-[#111827] cursor-pointer select-none active:scale-95 flex items-center justify-center"
             >
               Done & Return to Studio
             </button>
@@ -277,25 +277,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Instant Checkout & Lead Portal</span>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-[10px] font-bold text-amber-800">
-                  ⚡ Next Batch: 649 ETB
+                <span className="px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold text-blue-800">
+                  ⚡ 18-Month Plan: 649 ETB
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mt-1">
                 Activate Google AI Pro
               </h2>
               <p className="text-xs text-[#6B7280] mt-0.5">
-                18-Month Continuous License • 5 TB Cloud Storage • 5 Seats • <strong className="text-blue-600">399 ETB</strong>
+                18-Month Continuous License • 5 TB Cloud Storage • 5 Seats • <strong className="text-blue-600">649 ETB</strong>
               </p>
-            </div>
-
-            {/* Price Increase Urgent Reminder */}
-            <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-900 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                <span><strong>Special Offer:</strong> Lock in 399 ETB today before price jumps to 649 ETB.</span>
-              </div>
-              <span className="font-bold text-amber-800 text-[11px]">Save 250 ETB</span>
             </div>
 
             {errorMsg && (
@@ -340,7 +331,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       key={method.id}
                       type="button"
                       onClick={() => setSelectedMethod(method.id)}
-                      className={`p-3 rounded-2xl border text-center transition-all cursor-pointer flex flex-col items-center gap-1.5 ${
+                      className={`min-h-[52px] p-3 rounded-2xl border text-center transition-all cursor-pointer select-none active:scale-95 flex flex-col items-center justify-center gap-1.5 ${
                         isSelected 
                           ? 'bg-white text-blue-600 border-blue-500/40 shadow-md ring-2 ring-blue-400/30' 
                           : 'bg-white/40 text-[#6B7280] border-white/80 hover:bg-white/70'
@@ -374,7 +365,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 <button
                   type="button"
                   onClick={() => handleCopyAccount(currentPayment.accountNumber)}
-                  className="px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 text-[#111827] text-xs font-bold flex items-center gap-1 border border-slate-200/80 transition-colors cursor-pointer"
+                  className="min-h-[38px] px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-50 text-[#111827] text-xs font-bold flex items-center gap-1.5 border border-slate-200/80 transition-all cursor-pointer select-none active:scale-90"
                 >
                   {copiedAccount ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copiedAccount ? 'Copied' : 'Copy'}</span>
@@ -382,7 +373,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               </div>
 
               <div className="text-[11px] text-[#6B7280] leading-relaxed bg-white/50 p-2 rounded-xl border border-white/60">
-                👉 Send <strong>399 ETB</strong> to the account above, then enter your transaction reference below.
+                👉 Send <strong>649 ETB</strong> to the account above, then enter your transaction reference below.
               </div>
             </div>
 
@@ -435,9 +426,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="clay-button w-full py-4 font-bold text-sm text-[#111827] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="clay-button min-h-[50px] w-full py-4 font-bold text-sm text-[#111827] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 select-none active:scale-95"
             >
-              <span>{isSubmitting ? 'Recording Order & Dispatching Receipt...' : 'Confirm Order & Send Email Receipt (399 ETB)'}</span>
+              <span>{isSubmitting ? 'Recording Order & Dispatching Receipt...' : 'Confirm Order & Send Email Receipt (649 ETB)'}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>

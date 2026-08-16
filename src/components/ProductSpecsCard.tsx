@@ -30,8 +30,8 @@ export const ProductSpecsCard: React.FC<ProductSpecsCardProps> = ({ onOpenChecko
         <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">
           Product Specifications
         </h2>
-        <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-amber-900">
-          <span>⚡ Price increases to 649 ETB next batch — Lock in 399 ETB now and save 250 ETB</span>
+        <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-xs font-bold text-blue-900">
+          <span>⚡ Official Master Tier: 649 ETB for 18-Month Unrestricted Access</span>
         </div>
         <p className="text-[#6B7280] mt-2 text-sm sm:text-base">
           Engineered for developers, designers, agencies, and families needing unrestricted AI power with massive cloud storage.
@@ -53,7 +53,7 @@ export const ProductSpecsCard: React.FC<ProductSpecsCardProps> = ({ onOpenChecko
             Full 18 months of uninterrupted Gemini Pro access. No monthly renewals, zero surprise charges, and guaranteed continuity throughout your entire license period.
           </p>
           <div className="pt-2 text-xs font-medium text-[#6B7280] border-t border-white/60 flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> One-time 399 ETB payment
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" /> One-time 649 ETB payment
           </div>
         </div>
 
@@ -162,9 +162,9 @@ export const ProductSpecsCard: React.FC<ProductSpecsCardProps> = ({ onOpenChecko
           <div className="shrink-0 w-full md:w-auto">
             <button
               onClick={onOpenCheckout}
-              className="clay-button w-full md:w-auto px-6 py-3 font-bold text-xs text-[#111827] cursor-pointer flex items-center justify-center gap-2"
+              className="clay-button min-h-[48px] w-full md:w-auto px-8 py-3.5 font-bold text-xs text-[#111827] cursor-pointer flex items-center justify-center gap-2 select-none active:scale-95"
             >
-              <span>Accept Policy & Lock in 399 ETB</span>
+              <span>Accept Policy & Order (649 ETB)</span>
             </button>
           </div>
         </div>

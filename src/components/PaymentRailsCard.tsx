@@ -38,7 +38,7 @@ export const PaymentRailsCard: React.FC<PaymentRailsCardProps> = ({ onSelectPaym
           Accepted Ethiopian Payment Gateways
         </h2>
         <p className="text-[#6B7280] mt-2 text-sm sm:text-base">
-          No foreign cards or international exchange needed. Pay 399 ETB securely via your favorite local Ethiopian provider.
+          No foreign cards or international exchange needed. Pay 649 ETB securely via your favorite local Ethiopian provider.
         </p>
       </div>
 
@@ -84,7 +84,7 @@ export const PaymentRailsCard: React.FC<PaymentRailsCardProps> = ({ onSelectPaym
 
                   <button
                     onClick={() => handleCopy(method.accountNumber, method.id)}
-                    className="p-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200/80 transition-colors cursor-pointer shadow-2xs"
+                    className="min-w-[40px] min-h-[40px] p-2 rounded-xl bg-white hover:bg-slate-50 active:scale-90 text-slate-700 border border-slate-200/80 transition-all cursor-pointer shadow-2xs flex items-center justify-center select-none"
                     title="Copy Account Number"
                   >
                     {isCopied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-slate-600" />}
@@ -104,9 +104,9 @@ export const PaymentRailsCard: React.FC<PaymentRailsCardProps> = ({ onSelectPaym
               <div className="pt-6 border-t border-white/60 mt-4 space-y-2">
                 <button
                   onClick={() => onSelectPayment(method.id)}
-                  className="clay-button w-full py-3 font-bold text-xs text-[#111827] flex items-center justify-center gap-2 cursor-pointer"
+                  className="clay-button min-h-[48px] w-full py-3.5 font-bold text-xs text-[#111827] flex items-center justify-center gap-2 cursor-pointer select-none active:scale-95"
                 >
-                  <span>Pay with {method.shortCode} (399 ETB)</span>
+                  <span>Pay with {method.shortCode} (649 ETB)</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
                 
@@ -123,7 +123,7 @@ export const PaymentRailsCard: React.FC<PaymentRailsCardProps> = ({ onSelectPaym
       <div className="mt-8 p-4 rounded-[24px] bg-white/40 border border-white/60 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6B7280] max-w-4xl mx-auto text-center sm:text-left">
         <div className="flex items-center gap-2 font-medium">
           <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
-          <span>After sending 399 ETB, simply paste your Transaction Reference ID in the checkout window for automated order matching.</span>
+          <span>After sending 649 ETB, simply paste your Transaction Reference ID in the checkout window for automated order matching.</span>
         </div>
       </div>
     </section>

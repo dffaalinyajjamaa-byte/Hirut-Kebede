@@ -79,7 +79,7 @@ export const MockupStudio: React.FC<MockupStudioProps> = ({ onOpenCheckout }) =>
                 setActivePreset(preset);
                 setCustomResult(null);
               }}
-              className={`clay-button px-5 py-2.5 text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+              className={`clay-button min-h-[44px] px-5 py-2.5 text-xs font-bold transition-all cursor-pointer select-none active:scale-95 flex items-center gap-2 ${
                 isActive 
                   ? 'border-blue-500/40 text-blue-700 bg-white/80 shadow-md ring-2 ring-blue-400/30' 
                   : 'text-[#6B7280] hover:text-[#111827]'
@@ -214,16 +214,16 @@ export const MockupStudio: React.FC<MockupStudioProps> = ({ onOpenCheckout }) =>
             </div>
 
             {/* Quick Checkout Link */}
-            <div className="flex items-center justify-between p-4 rounded-2xl bg-white/40 border border-white/60 backdrop-blur-md">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 rounded-2xl bg-white/40 border border-white/60 backdrop-blur-md">
               <div>
                 <div className="text-xs font-bold text-[#111827]">Experience this speed on your Gmail</div>
                 <div className="text-[11px] text-[#6B7280]">Includes 5 TB Cloud Storage & 5 Seats</div>
               </div>
               <button
                 onClick={onOpenCheckout}
-                className="clay-button px-5 py-2.5 font-bold text-xs text-[#111827] flex items-center gap-1.5 cursor-pointer"
+                className="clay-button min-h-[44px] px-5 py-2.5 font-bold text-xs text-[#111827] flex items-center gap-1.5 cursor-pointer select-none active:scale-95 w-full sm:w-auto justify-center"
               >
-                <span>Get 18M Tier (399 ETB)</span>
+                <span>Get 18M Tier (649 ETB)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

@@ -1,0 +1,6 @@
+{
+  "name": "Amir Plus",
+  "description": "Luxury-tier AI sales interface and product specialist for Google AI Pro subscriptions with Liquid Glass and Claymorphic UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -7,6 +7,8 @@ export const GOOGLE_AI_PRO_TIER: ProductTier = {
   durationMonths: 18,
   durationLabel: '18-Month Continuous Access',
   priceETB: 399,
+  upcomingPriceETB: 649,
+  priceIncreaseNotice: '⚡ Price Increase Alert: Pricing increases to 649 ETB next batch! Lock in 399 ETB today and save 250 ETB.',
   originalPriceUSD: 360, // $19.99/mo * 18 = ~$360
   savingsPercentage: 98,
   storageTB: 5,
@@ -26,7 +28,8 @@ export const GOOGLE_AI_PRO_TIER: ProductTier = {
     'Fulfillment SLA: The redeem authorization link must be executed within 24 hours of dispatch.',
     'Support SLA: Any connection or activation queries must be reported within 24 hours for review.',
     'Commercial Basis: Non-warranty basis after successful 24-hour delivery & authorization.',
-    'Privacy Guarantee: Your data remains private on your personal Google Account.'
+    'Privacy Guarantee: Your data remains private on your personal Google Account.',
+    'Price Increase Notice: Next tier allocation increases to 649 ETB after current batch expires.'
   ]
 };
 
@@ -108,9 +111,15 @@ export const MOCKUP_PRESETS: MockupPreset[] = [
 export const COMPARISON_DATA = [
   {
     feature: 'Monthly Cost (ETB Equiv.)',
-    amirPlus: '399 ETB (One-time for 18 Months! ~22 ETB/mo)',
+    amirPlus: '399 ETB (Lock in now! Increases to 649 ETB next batch)',
     standardGoogle: '~$20/mo (~2,400+ ETB/month)',
     chatGptPlus: '~$20/mo (~2,400+ ETB/month)'
+  },
+  {
+    feature: 'Total 18-Month Cost',
+    amirPlus: '399 ETB (Save 250 ETB vs 649 ETB upcoming rate)',
+    standardGoogle: '~43,200 ETB ($360 total)',
+    chatGptPlus: '~43,200 ETB ($360 total)'
   },
   {
     feature: 'Continuous License Duration',

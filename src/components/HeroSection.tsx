@@ -30,17 +30,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, onOpen
       {/* Main Glass Hero Stage */}
       <div className="glass-panel rounded-[40px] p-6 sm:p-10 md:p-14 relative overflow-hidden">
         {/* Holographic Top Banner Pill */}
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/50 border border-white/80 rounded-full shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            <span className="text-[11px] font-semibold uppercase tracking-widest text-[#6B7280]">
-              Next-Gen AI Provisioning • Global Access
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/10 border border-amber-500/30 rounded-full shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span className="text-[11px] font-bold tracking-wide text-amber-900">
+              ⚡ Limited Allocation: Price increasing to 649 ETB soon! Lock in 399 ETB today
             </span>
           </div>
 
           <div className="flex items-center gap-2 text-xs font-semibold text-[#6B7280] bg-white/50 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/80 shadow-xs">
             <Clock className="w-3.5 h-3.5 text-amber-500" />
-            <span>24-Hour Dispatch & Activation SLA</span>
+            <span>24h SLA • Instant Email Receipt to Gmail</span>
           </div>
         </div>
 
@@ -126,6 +126,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout, onOpen
                     <span className="text-xs text-[#9CA3AF] line-through font-medium">~36,000 ETB</span>
                   </div>
                   <p className="text-xs text-[#6B7280] mt-0.5">All-inclusive fixed rate (18 Months)</p>
+                  <div className="mt-1.5 inline-block px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200/80 text-[10px] font-bold text-amber-800">
+                    Next Batch: 649 ETB (Save 250 ETB)
+                  </div>
                 </div>
                 <div className="px-3.5 py-1.5 bg-gradient-to-r from-[#3B82F6]/10 to-[#8B5CF6]/10 border border-[#3B82F6]/20 rounded-full">
                   <span className="text-[11px] font-bold text-[#3B82F6] uppercase tracking-wider">BEST VALUE</span>

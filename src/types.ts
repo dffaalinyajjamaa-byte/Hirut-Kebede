@@ -19,6 +19,8 @@ export interface ProductTier {
   durationMonths: number;
   durationLabel: string;
   priceETB: number;
+  upcomingPriceETB: number;
+  priceIncreaseNotice: string;
   originalPriceUSD: number;
   savingsPercentage: number;
   storageTB: number;
@@ -45,6 +47,8 @@ export interface OrderRecord {
   createdAt: string;
   redeemLink?: string;
   slaDeadline: string; // ISO String for 24h timer
+  emailReceiptSent?: boolean;
+  emailReceiptTimestamp?: string;
   notes?: string;
 }
 

@@ -30,6 +30,9 @@ export const ProductSpecsCard: React.FC<ProductSpecsCardProps> = ({ onOpenChecko
         <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">
           Product Specifications
         </h2>
+        <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-amber-900">
+          <span>⚡ Price increases to 649 ETB next batch — Lock in 399 ETB now and save 250 ETB</span>
+        </div>
         <p className="text-[#6B7280] mt-2 text-sm sm:text-base">
           Engineered for developers, designers, agencies, and families needing unrestricted AI power with massive cloud storage.
         </p>
@@ -146,12 +149,13 @@ export const ProductSpecsCard: React.FC<ProductSpecsCardProps> = ({ onOpenChecko
           <div className="space-y-2 text-left max-w-2xl">
             <div className="flex items-center gap-2 text-amber-800 font-bold text-sm">
               <Clock className="w-4 h-4 text-amber-600" />
-              <span>Critical Fulfillment & Support SLA (24-Hour Policy)</span>
+              <span>Critical Fulfillment & Support SLA (24-Hour Policy + Automated Email Receipt)</span>
             </div>
             <p className="text-xs sm:text-sm text-[#111827] leading-relaxed">
-              <strong>1. Activation Window:</strong> The redeem authorization link must be executed within <span className="text-amber-800 font-bold">24 hours</span> of dispatch.<br />
-              <strong>2. Support SLA:</strong> Any connection or activation issues must be reported within <span className="text-amber-800 font-bold">24 hours</span> for immediate review.<br />
-              <strong>3. Policy:</strong> Commercial sales are provisioned on a non-warranty basis after the 24-hour verification window has passed.
+              <strong>1. Instant Email Notification:</strong> An automated confirmation receipt is immediately sent to your provided Gmail with order details.<br />
+              <strong>2. Activation Window:</strong> The official redeem authorization link must be executed within <span className="text-amber-800 font-bold">24 hours</span> of dispatch.<br />
+              <strong>3. Support SLA:</strong> Any connection or activation issues must be reported within <span className="text-amber-800 font-bold">24 hours</span> for immediate review.<br />
+              <strong>4. Policy:</strong> Commercial sales are provisioned on a non-warranty basis after the 24-hour verification window has passed.
             </p>
           </div>
 
@@ -160,7 +164,7 @@ export const ProductSpecsCard: React.FC<ProductSpecsCardProps> = ({ onOpenChecko
               onClick={onOpenCheckout}
               className="clay-button w-full md:w-auto px-6 py-3 font-bold text-xs text-[#111827] cursor-pointer flex items-center justify-center gap-2"
             >
-              <span>Accept Policy & Order (399 ETB)</span>
+              <span>Accept Policy & Lock in 399 ETB</span>
             </button>
           </div>
         </div>

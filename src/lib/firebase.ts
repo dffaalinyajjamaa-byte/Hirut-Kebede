@@ -92,18 +92,70 @@ export async function createOrder(
   const now = new Date();
   const slaDeadline = new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString();
 
+  let emailReceiptSent = false;
+  let emailReceiptTimestamp: string | undefined = undefined;
+
+  // Trigger automated email notification receipt dispatch
+  try {
+    const receiptRes = await fetch('/api/send-order-receipt', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId,
+        targetGmail: orderData.targetGmail,
+        userEmail: orderData.userEmail,
+        productTitle: orderData.productTitle,
+        priceETB: orderData.priceETB,
+        paymentMethod: orderData.paymentMethod,
+        paymentReference: orderData.paymentReference,
+        storageTB: orderData.storageTB,
+        seats: orderData.seats,
+        slaDeadline
+      })
+    });
+    if (receiptRes.ok) {
+      emailReceiptSent = true;
+      emailReceiptTimestamp = now.toISOString();
+    }
+  } catch (err) {
+    console.warn('[Firebase] Email receipt dispatch notice:', err);
+  }
+
   const newOrder: OrderRecord = {
     ...orderData,
     id: orderId,
     userId,
     createdAt: now.toISOString(),
     slaDeadline,
-    status: orderData.status || 'pending_verification'
+    status: orderData.status || 'pending_verification',
+    emailReceiptSent,
+    emailReceiptTimestamp
   };
 
   const orderRef = doc(db, 'users', userId, 'orders', orderId);
   await setDoc(orderRef, newOrder);
   return newOrder;
+}
+
+// Resend or dispatch automated receipt manually
+export async function sendAutomatedEmailReceipt(order: OrderRecord) {
+  const res = await fetch('/api/send-order-receipt', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      orderId: order.id,
+      targetGmail: order.targetGmail,
+      userEmail: order.userEmail,
+      productTitle: order.productTitle,
+      priceETB: order.priceETB,
+      paymentMethod: order.paymentMethod,
+      paymentReference: order.paymentReference,
+      storageTB: order.storageTB,
+      seats: order.seats,
+      slaDeadline: order.slaDeadline
+    })
+  });
+  return await res.json();
 }
 
 // Subscribe to User Orders
